@@ -88,7 +88,8 @@ Visit [Mini NES Builders](https://www.facebook.com/groups/miniNESbuilders/) for 
     python /home/pi/minismartcontroller/pyMiniSmartController/py_msc.py &
     ```
 4.  Hit 'Ctrl+X' then 'y' and finally 'Enter' to save and exit.
-5. Script installation is now complete, now [reboot](https://www.youtube.com/watch?v=fuEJWmxWkKw):
+5. Script installation is now complete, now [reboot](https://www.youtube.com/watch?v=fuEJWmxWkKw)
+
     ```
     sudo reboot now
     ```
