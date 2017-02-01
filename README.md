@@ -33,6 +33,9 @@ Visit [Mini NES Builders](https://www.facebook.com/groups/miniNESbuilders/) for 
 |            	|                 	|
 |            	|                 	|
 
+## Button Operation
+
+
 ## Front Panel LED Operation
 | PATTEN              	| STATUS                                                                             	|
 |---------------------	|------------------------------------------------------------------------------------	|
