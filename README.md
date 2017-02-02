@@ -68,6 +68,7 @@ Button operation for NFC systems:
 2. Short bootloader jumper (P6) and connect mini smart controller to a USB host. The red LED (D1) will flash once recognize by the USB host.
 3. Use bootloader application [MPHidFlash](https://github.com/ApertureLabsLtd/mphidflash/tree/master/binaries) to update the firmware.
 4. Once MPHidFlash has been installed, type the following command line command to upload the firmware:
+
     ```
     mphidflash -w minismartcontroller_vX.X_kit1a.hex
     ```
@@ -86,6 +87,7 @@ Button operation for NFC systems:
     ```
 4. Press 'y' if prompted to download and install.
 5. Change the default settings for the serial port
+
     ```
     sudo raspi-config
     ```
@@ -95,20 +97,24 @@ Button operation for NFC systems:
 
 ## Script Installation
 1. Download the mini smart controller repository
+
     ```
     cd ~/
     git clone https://github.com/kjones200/minismartcontroller.git
     ```
 2. Modify rc.local to launch script at boot up
+
     ```
     sudo nano /etc/rc.local
     ```
 3. Enter the following command just before 'exit 0':
+
     ```
     python /home/pi/minismartcontroller/pyMiniSmartController/py_msc.py &
     ```
 4. Hit 'Ctrl+X' then 'y' and finally 'Enter' to save and exit.
 5. Script installation is now complete, now [reboot](https://www.youtube.com/watch?v=fuEJWmxWkKw)
+
     ```
     sudo reboot now
     ```
