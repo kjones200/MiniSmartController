@@ -30,10 +30,28 @@ Visit [Mini NES Builders](https://www.facebook.com/groups/miniNESbuilders/) for 
 | Date       	| Notes           	|
 |------------	|-----------------	|
 | 2017-01-26 	| Initial release 	|
-|            	|                 	|
-|            	|                 	|
+|
 
-## Button Operation
+## Front Panel Button Operations
+
+Button operation for non NFC systems:
+
+|  button 	   | duration   | off        | in es      | in game    |
+| ------------ | ----------	| ---------- | ---------- | ---------- |
+| power        | momentary  | turn on    | nothing    | nothing    |
+| power        | 3 seconds  | nothing    | shutdown   | shutdown   |
+| reset        | momentary  | nothing    | nothing    | reset game | 
+| reset        | 3 seconds  | nothing    | reset      | reset      |
+
+Button operation for NFC systems:
+
+|  button 	   | duration   | off        | in es      | in game    |
+| ------------ | ----------	| ---------- | ---------- | ---------- |
+| power        | momentary  | tbd        | tbd        | tbd        |   
+| power        | 3 seconds  | tbd        | tbd        | tbd        |
+| reset        | momentary  | tbd        | tbd        | tbd        | 
+| reset        | 3 seconds  | tbd        | tbd        | tbd        |
+
 
 
 ## Front Panel LED Operation
@@ -53,14 +71,14 @@ Visit [Mini NES Builders](https://www.facebook.com/groups/miniNESbuilders/) for 
 ```
     mphidflash -w minismartcontroller_vX.X_kit1a.hex
 ```
-5. Unplug mini start controller from host and remove bootloader jumper (P6).
+5. Unplug mini smart controller from host and remove bootloader jumper (P6).
 6. Update complete.
 
 ## Retropie Installation and Configuration
 1. Follow sections 1-3 from the [Retropie First Installation Guide](https://github.com/RetroPie/RetroPie-Setup/wiki/First-Installation#hardware-needed).
 
 2. SSH into retropie.
-3. Install the Python dependencies. NOTE: Some dependecies aren't need, but will be.  So lets just get them nbow.
+3. Install the Python dependencies. NOTE: Some dependencies are not needed, yet, so lets just get them now.
 ```
     sudo apt-get update
     sudo apt-get install python-dev python-pip python-gpiozero
@@ -85,11 +103,11 @@ Visit [Mini NES Builders](https://www.facebook.com/groups/miniNESbuilders/) for 
 ```
     sudo nano /etc/rc.local
 ```
-3. Enter the following comand just before 'exit 0':
+3. Enter the following command just before 'exit 0':
 ```
     python /home/pi/minismartcontroller/pyMiniSmartController/py_msc.py &
 ```
-4.  Hit 'Ctrl+X' then 'y' and finally 'Enter' to save and exit.
+4. Hit 'Ctrl+X' then 'y' and finally 'Enter' to save and exit.
 5. Script installation is now complete, now [reboot](https://www.youtube.com/watch?v=fuEJWmxWkKw)
 ```
     sudo reboot now
@@ -103,16 +121,16 @@ The mini smart controller kit 1A can be converted to kit 1B.  Kit 1B uses a latc
     - Basic electronic knowlege of switches
     - Soldering experience
 - Tool
-    - Solding iron
-    - Vaccum Desolding iron (Recommended [Vaccum Desolding Iron](https://www.amazon.com/Science-Purchase-Desoldering-Iron/dp/B00CUKTH2A/ref=sr_1_9?ie=UTF8&qid=1485560615&sr=8-9&keywords=vacuum+desoldering+iron))
+    - Soldering iron
+    - Vacuum de-soldering iron (Recommended [Vaccum Desolding Iron](https://www.amazon.com/Science-Purchase-Desoldering-Iron/dp/B00CUKTH2A/ref=sr_1_9?ie=UTF8&qid=1485560615&sr=8-9&keywords=vacuum+desoldering+iron))
     - Solder
     - Flux
     - Fume extractor (Optional)
 - Bill of Materials
     - Kit 1B firmware ([firmware](https://github.com/kjones200/minismartcontroller/tree/master/firmware))
-    - Pushbutton Switche 7mm DPDT ON - OFF ([MHP2273](http://www.mouser.com/ProductDetail/Apem/MHPS2273/?qs=sGAEpiMZZMvxtGF7dlGNpiWIsZK%2fBfC0yZ1ZBCme%252brc%3d))
+    - Pushbutton Switch 7mm DPDT ON - OFF ([MHP2273](http://www.mouser.com/ProductDetail/Apem/MHPS2273/?qs=sGAEpiMZZMvxtGF7dlGNpiWIsZK%2fBfC0yZ1ZBCme%252brc%3d))
 
 
-1. Desolder the power switch from the front panel PCBA.
+1. De-solder the power switch from the front panel PCBA.
 2. Solder the new switch (MHP2273)
-3. Update firmware with 'minismartcontroller_vX.X_kit1b
+3. Update firmware with 'minismartcontroller_vX.X_kit1b'
