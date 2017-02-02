@@ -80,9 +80,12 @@ Button operation for NFC systems:
 
 2. SSH into retropie.
 3. Install the Python dependencies. NOTE: Some dependencies are not needed, yet, so lets just get them now.
+    
     ```
     sudo apt-get update
+    
     sudo apt-get install python-dev python-pip python-gpiozero
+    
     sudo pip install psutil pyserial
     ```
 4. Press 'y' if prompted to download and install.
