@@ -68,9 +68,9 @@ Button operation for NFC systems:
 2. Short bootloader jumper (P6) and connect mini smart controller to a USB host. The red LED (D1) will flash once recognize by the USB host.
 3. Use bootloader application [MPHidFlash](https://github.com/ApertureLabsLtd/mphidflash/tree/master/binaries) to update the firmware.
 4. Once MPHidFlash has been installed, type the following command line command to upload the firmware:
-```
-mphidflash -w minismartcontroller_vX.X_kit1a.hex
-```
+    ```
+    mphidflash -w minismartcontroller_vX.X_kit1a.hex
+    ```
 5. Unplug mini smart controller from host and remove bootloader jumper (P6).
 6. Update complete.
 
@@ -79,39 +79,39 @@ mphidflash -w minismartcontroller_vX.X_kit1a.hex
 
 2. SSH into retropie.
 3. Install the Python dependencies. NOTE: Some dependencies are not needed, yet, so lets just get them now.
-```
-sudo apt-get update
-sudo apt-get install python-dev python-pip python-gpiozero
-sudo pip install psutil pyserial
-```
+    ```
+    sudo apt-get update
+    sudo apt-get install python-dev python-pip python-gpiozero
+    sudo pip install psutil pyserial
+    ```
 4. Press 'y' if prompted to download and install.
 5. Change the default settings for the serial port
-```
-sudo raspi-config
-```
+    ```
+    sudo raspi-config
+    ```
 6. Scroll down to 'Advanced Options' then 'Serial' and select 'No', then 'Finish' to exit.
 7. Edit the boot config to enable the serial port for use in the script.  Scroll down using your arrow keys and change 'enable_uart=0' to 'enable_uart=1'
 8. Hit 'Ctrl+X' then 'y' and finally 'Enter' to save and exit.
 
 ## Script Installation
 1. Download the mini smart controller repository
-```
-cd ~/
-git clone https://github.com/kjones200/minismartcontroller.git
-```
+    ```
+    cd ~/
+    git clone https://github.com/kjones200/minismartcontroller.git
+    ```
 2. Modify rc.local to launch script at boot up
-```
-sudo nano /etc/rc.local
-```
+    ```
+    sudo nano /etc/rc.local
+    ```
 3. Enter the following command just before 'exit 0':
-```
-python /home/pi/minismartcontroller/pyMiniSmartController/py_msc.py &
-```
+    ```
+    python /home/pi/minismartcontroller/pyMiniSmartController/py_msc.py &
+    ```
 4. Hit 'Ctrl+X' then 'y' and finally 'Enter' to save and exit.
 5. Script installation is now complete, now [reboot](https://www.youtube.com/watch?v=fuEJWmxWkKw)
-```
-sudo reboot now
-```
+    ```
+    sudo reboot now
+    ```
 
 ## Convert Kit 1A to Kit 1B
 
