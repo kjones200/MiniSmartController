@@ -78,8 +78,15 @@ Button operation for NFC systems:
 ## Retropie Installation and Configuration
 1. Follow sections 1-3 from the [Retropie First Installation Guide](https://github.com/RetroPie/RetroPie-Setup/wiki/First-Installation#hardware-needed).
 
-2. SSH into retropie.
-3. Install the Python dependencies. NOTE: Some dependencies are not needed, yet, so lets just get them now.
+2. Open the Quick Menu by pressing the start key.
+    [![retroarch.png](https://s25.postimg.org/c7x8loq6n/retroarch.png)](https://postimg.org/image/asvnwyp3f/)
+3. Go into *RETROARCH* > *Settings* > *Configuration* and enable *Save Configuration On Exit*
+    [![retroarch1.png](https://s25.postimg.org/gv3angdjj/retroarch1.png)](https://postimg.org/image/wgkm7ephn/)
+4. Go down to 'Network' and enable 'Network Commands' and change *Network Command* Port to 55355.
+    [![retroarch2.png](https://s25.postimg.org/93mkow9e7/retroarch2.png)](https://postimg.org/image/44z2ad5l7/)
+5. Exit this menu to save the settings
+6. SSH into retropie.
+7. Install the Python dependencies. NOTE: Some dependencies are not needed, yet, so lets just get them now.
     
     ```
     sudo apt-get update
@@ -88,15 +95,20 @@ Button operation for NFC systems:
     
     sudo pip install psutil pyserial
     ```
-4. Press 'y' if prompted to download and install.
-5. Change the default settings for the serial port
+8. Press 'y' if prompted to download and install.
+9. Change the default settings for the serial port
 
     ```
     sudo raspi-config
     ```
-6. Scroll down to 'Advanced Options' then 'Serial' and select 'No', then 'Finish' to exit.
-7. Edit the boot config to enable the serial port for use in the script.  Scroll down using your arrow keys and change 'enable_uart=0' to 'enable_uart=1'
-8. Hit 'Ctrl+X' then 'y' and finally 'Enter' to save and exit.
+    [![Screen Shot 2017-02-04 at 6.03.19 PM.png](https://s25.postimg.org/9a09rzij3/Screen_Shot_2017_02_04_at_6_03_19_PM.png)](https://postimg.org/image/3ltz13e6j/)
+10. Scroll down to 'Advanced Options' then 'Serial' and select 'No', then 'Finish' to exit.
+    [![Screen Shot 2017-02-04 at 6.40.33 PM.png](https://s25.postimg.org/82mbzrsen/Screen_Shot_2017_02_04_at_6_40_33_PM.png)](https://postimg.org/image/jrqbnqjd7/)
+    
+    [![Screen Shot 2017-02-04 at 6.03.33 PM.png](https://s25.postimg.org/4cmp6vgjz/Screen_Shot_2017_02_04_at_6_03_33_PM.png)](https://postimg.org/image/dx6btr5vv/)
+11. Edit the boot config to enable the serial port for use in the script.  Scroll down using your arrow keys and change 'enable_uart=0' to 'enable_uart=1
+    [![Screen Shot 2017-02-04 at 6.04.24 PM.png](https://s25.postimg.org/65plv71qn/Screen_Shot_2017_02_04_at_6_04_24_PM.png)](https://postimg.org/image/qpuftohhn/)
+12. Hit 'Ctrl+X' then 'y' and finally 'Enter' to save and exit.
 
 ## Script Installation
 1. Download the mini smart controller repository
@@ -105,7 +117,7 @@ Button operation for NFC systems:
     cd ~/
     git clone https://github.com/kjones200/minismartcontroller.git
     ```
-2. Modify rc.local to launch script at boot up
+2. Modify *rc.local* to launch script at boot up
 
     ```
     sudo nano /etc/rc.local
@@ -115,6 +127,7 @@ Button operation for NFC systems:
     ```
     python /home/pi/minismartcontroller/pyMiniSmartController/py_msc.py &
     ```
+    [![Screen Shot 2017-02-04 at 5.58.06 PM.png](https://s25.postimg.org/5cd02kvpr/Screen_Shot_2017_02_04_at_5_58_06_PM.png)](https://postimg.org/image/f9o0vn3bf/)
 4. Hit 'Ctrl+X' then 'y' and finally 'Enter' to save and exit.
 5. Script installation is now complete, now [reboot](https://www.youtube.com/watch?v=fuEJWmxWkKw)
 
