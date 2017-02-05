@@ -78,7 +78,7 @@ Button operation for NFC systems:
 ## Retropie Installation and Configuration
 1. Follow sections 1-3 from the [Retropie First Installation Guide](https://github.com/RetroPie/RetroPie-Setup/wiki/First-Installation#hardware-needed).
 
-2. Open the Quick Menu by pressing the start key.
+2. Open the *RetrioPie* Menu by pressing the 'A' key with the retropie icon highlighted.
     [![retroarch.png](https://s25.postimg.org/c7x8loq6n/retroarch.png)](https://postimg.org/image/asvnwyp3f/)
 3. Go into *RETROARCH* > *Settings* > *Configuration* and enable *Save Configuration On Exit*
     [![retroarch1.png](https://s25.postimg.org/gv3angdjj/retroarch1.png)](https://postimg.org/image/wgkm7ephn/)
