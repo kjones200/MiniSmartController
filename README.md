@@ -107,8 +107,10 @@ Button operation for NFC systems:
 1. Follow sections 1-3 from the [Retropie First Installation Guide](https://github.com/RetroPie/RetroPie-Setup/wiki/First-Installation#hardware-needed).
 
 2. Open the *RetrioPie* Menu by pressing the 'A' key with the retropie icon highlighted.
+    
     <img src="https://s25.postimg.org/c7x8loq6n/retroarch.png" width="500">
 3. Go into *RETROARCH* > *Settings* > *Configuration* and enable *Save Configuration On Exit*
+    
     <img src="https://s25.postimg.org/gv3angdjj/retroarch1.png" width="500">
 4. Go down to 'Network' and enable 'Network Commands' and change *Network Command* Port to 55355.
     
@@ -132,10 +134,10 @@ Button operation for NFC systems:
     ```
     <img src="https://s25.postimg.org/9a09rzij3/Screen_Shot_2017_02_04_at_6_03_19_PM.png" width="500">
 10. Scroll down to 'Advanced Options' then 'Serial' and select 'No', then 'Finish' to exit.
-    <img src="https://s25.postimg.org/82mbzrsen/Screen_Shot_2017_02_04_at_6_40_33_PM.png" width="500">
     
-    <img src="https://s25.postimg.org/4cmp6vgjz/Screen_Shot_2017_02_04_at_6_03_33_PM.png" width="500">
+    <img src="https://s25.postimg.org/82mbzrsen/Screen_Shot_2017_02_04_at_6_40_33_PM.png" width="250"> <img src="https://s25.postimg.org/4cmp6vgjz/Screen_Shot_2017_02_04_at_6_03_33_PM.png" width="250">
 11. Edit the boot config to enable the serial port for use in the script.  Scroll down using your arrow keys and change 'enable_uart=0' to 'enable_uart=1
+    
     <img src="https://s25.postimg.org/65plv71qn/Screen_Shot_2017_02_04_at_6_04_24_PM.png" width="500">
 12. Hit 'Ctrl+X' then 'y' and finally 'Enter' to save and exit.
 
