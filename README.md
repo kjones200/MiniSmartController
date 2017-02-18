@@ -2,6 +2,8 @@
 
 Mini Smart Controller is a simple electronics kits used in mini NES builds and more.
 
+<img src="http://i.imgur.com/hKMNzRW.png" width="500">
+
 ### Key Features:
 - Power controller (Power and reset switches)
 - Fan controller with active cooling (supports 2, 3, and 4 pin fans)
@@ -53,6 +55,32 @@ Button operation for NFC systems:
 | reset        | 3 seconds  | tbd        | tbd        | tbd        |
 
 
+## Kit Installation
+
+1. Install USB extender harness and route cable under the raspberry pi. Hot glue and CA glue may used to hold down cables.
+ 
+    <img src="http://i.imgur.com/IfsR2J1.png" width="500">
+
+2. Glue switch mount to the base of the shell.
+  
+    <img src="http://i.imgur.com/eJFbQAH.jpg" width="500">
+    
+3. Install the raspberry pi with the USB extender.
+    
+    <img src="http://i.imgur.com/2QyfwHJ.png" width="500">
+
+4. Optional: Connect fan to 4 pin fan connector.
+
+    <img src="http://i.imgur.com/J800hVu.png" width="250"> <img src="http://i.imgur.com/icBM4Rt.png" width="250">
+    
+5. Connect front panel cable to the main PCB.
+    
+    <img src="http://i.imgur.com/PbAjzsu.png" width="500">
+
+6. Install main PCB.
+    
+    <img src="http://i.imgur.com/aSuW1Sm.png" width="500">
+   
 
 ## Front Panel LED Operation
 | PATTEN              	| STATUS                                                                             	|
@@ -79,11 +107,12 @@ Button operation for NFC systems:
 1. Follow sections 1-3 from the [Retropie First Installation Guide](https://github.com/RetroPie/RetroPie-Setup/wiki/First-Installation#hardware-needed).
 
 2. Open the *RetrioPie* Menu by pressing the 'A' key with the retropie icon highlighted.
-    [![retroarch.png](https://s25.postimg.org/c7x8loq6n/retroarch.png)](https://postimg.org/image/asvnwyp3f/)
+    <img src="https://s25.postimg.org/c7x8loq6n/retroarch.png" width="500">
 3. Go into *RETROARCH* > *Settings* > *Configuration* and enable *Save Configuration On Exit*
-    [![retroarch1.png](https://s25.postimg.org/gv3angdjj/retroarch1.png)](https://postimg.org/image/wgkm7ephn/)
+    <img src="https://s25.postimg.org/gv3angdjj/retroarch1.png" width="500">
 4. Go down to 'Network' and enable 'Network Commands' and change *Network Command* Port to 55355.
-    [![retroarch2.png](https://s25.postimg.org/93mkow9e7/retroarch2.png)](https://postimg.org/image/44z2ad5l7/)
+    
+    <img src="https://s25.postimg.org/93mkow9e7/retroarch2.png" width="500">
 5. Exit this menu to save the settings
 6. SSH into retropie.
 7. Install the Python dependencies. NOTE: Some dependencies are not needed, yet, so lets just get them now.
@@ -101,13 +130,13 @@ Button operation for NFC systems:
     ```
     sudo raspi-config
     ```
-    [![Screen Shot 2017-02-04 at 6.03.19 PM.png](https://s25.postimg.org/9a09rzij3/Screen_Shot_2017_02_04_at_6_03_19_PM.png)](https://postimg.org/image/3ltz13e6j/)
+    <img src="https://s25.postimg.org/9a09rzij3/Screen_Shot_2017_02_04_at_6_03_19_PM.png" width="500">
 10. Scroll down to 'Advanced Options' then 'Serial' and select 'No', then 'Finish' to exit.
-    [![Screen Shot 2017-02-04 at 6.40.33 PM.png](https://s25.postimg.org/82mbzrsen/Screen_Shot_2017_02_04_at_6_40_33_PM.png)](https://postimg.org/image/jrqbnqjd7/)
+    <img src="https://s25.postimg.org/82mbzrsen/Screen_Shot_2017_02_04_at_6_40_33_PM.png" width="500">
     
-    [![Screen Shot 2017-02-04 at 6.03.33 PM.png](https://s25.postimg.org/4cmp6vgjz/Screen_Shot_2017_02_04_at_6_03_33_PM.png)](https://postimg.org/image/dx6btr5vv/)
+    <img src="https://s25.postimg.org/4cmp6vgjz/Screen_Shot_2017_02_04_at_6_03_33_PM.png" width="500">
 11. Edit the boot config to enable the serial port for use in the script.  Scroll down using your arrow keys and change 'enable_uart=0' to 'enable_uart=1
-    [![Screen Shot 2017-02-04 at 6.04.24 PM.png](https://s25.postimg.org/65plv71qn/Screen_Shot_2017_02_04_at_6_04_24_PM.png)](https://postimg.org/image/qpuftohhn/)
+    <img src="https://s25.postimg.org/65plv71qn/Screen_Shot_2017_02_04_at_6_04_24_PM.png" width="500">
 12. Hit 'Ctrl+X' then 'y' and finally 'Enter' to save and exit.
 
 ## Script Installation
@@ -127,7 +156,7 @@ Button operation for NFC systems:
     ```
     python /home/pi/minismartcontroller/pyMiniSmartController/py_msc.py &
     ```
-    [![Screen Shot 2017-02-04 at 5.58.06 PM.png](https://s25.postimg.org/5cd02kvpr/Screen_Shot_2017_02_04_at_5_58_06_PM.png)](https://postimg.org/image/f9o0vn3bf/)
+    <img src="https://s25.postimg.org/5cd02kvpr/Screen_Shot_2017_02_04_at_5_58_06_PM.png" width="500">
 4. Hit 'Ctrl+X' then 'y' and finally 'Enter' to save and exit.
 5. Script installation is now complete, now [reboot](https://www.youtube.com/watch?v=fuEJWmxWkKw)
 
