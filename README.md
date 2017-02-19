@@ -149,10 +149,16 @@ Button operation for KIT1B non NFC systems:
 10. Scroll down to 'Advanced Options' then 'Serial' and select 'No', then 'Finish' to exit.
     
     <img src="https://s25.postimg.org/82mbzrsen/Screen_Shot_2017_02_04_at_6_40_33_PM.png" width="250"> <img src="https://s25.postimg.org/4cmp6vgjz/Screen_Shot_2017_02_04_at_6_03_33_PM.png" width="250">
-11. Edit the boot config to enable the serial port for use in the script.  Scroll down using your arrow keys and change 'enable_uart=0' to 'enable_uart=1.
+
+11. Edit the boot config to enable the serial port for use in the script.
+    ```
+    sudo nano /boot/config.text
+    ```
+
+12. Scroll down using your arrow keys and change 'enable_uart=0' to 'enable_uart=1.
     
     <img src="https://s25.postimg.org/65plv71qn/Screen_Shot_2017_02_04_at_6_04_24_PM.png" width="500">
-12. Hit 'Ctrl+X' then 'y' and finally 'Enter' to save and exit.
+13. Hit 'Ctrl+X' then 'y' and finally 'Enter' to save and exit.
 
 ## Script Installation
 1. Download the mini smart controller repository
