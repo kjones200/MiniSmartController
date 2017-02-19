@@ -105,15 +105,41 @@ Button operation for KIT1B non NFC systems:
 
 
 ## Firmware Update
-1. Disconnect power source from mini smart controller.
-2. Short bootloader jumper (P6) and connect mini smart controller to a USB host. The red LED (D1) will flash once recognize by the USB host.
-3. Use bootloader application [MPHidFlash](https://github.com/ApertureLabsLtd/mphidflash/tree/master/binaries) to update the firmware.
-4. Once MPHidFlash has been installed, type the following command line command to upload the firmware:
 
-    ```
-    mphidflash -w minismartcontroller_vX.X_kit1a.hex
-    ```
-5. Unplug mini smart controller from host and remove bootloader jumper (P6).
+This section only needs to be preformed if the mini smart controller firmware needs to be updated or changed.  
+
+**NOTE:** All mini smart controllers ship with the latest firmware pre-loaded.
+
+1. Disconnect power source from mini smart controller.
+2. Short circuit (short) the bootloader jumper (P6) and connect mini smart controller to a USB host. The red LED (D1) will flash repeatedly once recognized by the USB host.  Reference pictures be
+
+    <figure>
+        <img src="http://i.imgur.com/XFgoiSC.png" width="100"/> 
+        <img src="http://i.imgur.com/jMDuq5c.png" width="100"/>
+        <figcaption>
+            Examples of P6 shorted
+        </figcaption>
+    </figure>
+    
+3. Open the application called HIDBootloader([download from here](https://github.com/kjones200/minismartcontroller/tree/master/dist/HIDBootloader/bin)) to update the firmware.
+4. Click on File > Import Firmware Image and select the desire firmware image.
+
+    <img src="http://i.imgur.com/w9QFH9G.png" width="500"/>
+ 
+5. Click on Program > Erase/Program/Verify Device to upload the firmware image onto the mini smart controller.
+
+    <img src="http://i.imgur.com/lVIWfq8.png" width="500"/>
+    
+6. Once the image has been successfully loaded, unplug mini smart controller from host and remove bootloader jumper (P6).
+
+     <figure>
+        <img src="http://i.imgur.com/UpB76Du.png" width="100"/>
+        <img src="http://i.imgur.com/mqQxmSG.png" width="100"/>
+        <figcaption>
+            Examples of P6 not shorted
+        </figcaption>
+    </figure>
+     
 6. Update complete.
 
 ## Retropie Installation and Configuration
@@ -204,5 +230,6 @@ The mini smart controller kit 1A can be converted to kit 1B.  Kit 1B uses a latc
 
 
 1. De-solder the power switch from the front panel PCBA.
-2. Solder the new switch (MHP2273)
-3. Update firmware with 'minismartcontroller_vX.X_kit1b'
+2. Solder the new switch (MHP2273).  Use the switch mount as spacer to elevate the switch before soldering.
+3. [Update firmware](https://github.com/kjones200/minismartcontroller/tree/master/dist/HIDBootloader/bin) with 'minismartcontroller_vX.X_kit1b.hex'
+
