@@ -152,7 +152,7 @@ Button operation for KIT1B non NFC systems:
 
 11. Edit the boot config to enable the serial port for use in the script.
     ```
-    sudo nano /boot/config.text
+    sudo nano /boot/config.txt
     ```
 
 12. Scroll down using your arrow keys and change 'enable_uart=0' to 'enable_uart=1.
