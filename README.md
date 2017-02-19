@@ -36,6 +36,7 @@ Visit [Mini NES Builders](https://www.facebook.com/groups/miniNESbuilders/) for 
 
 ## Front Panel Button Operations
 
+#### KIT 1A
 Button operation for non NFC systems:
 
 |  button 	   | duration   | off        | in es      | in game    |
@@ -45,6 +46,7 @@ Button operation for non NFC systems:
 | reset        | momentary  | nothing    | nothing    | reset game | 
 | reset        | 3 seconds  | nothing    | reset      | reset      |
 
+
 Button operation for NFC systems:
 
 |  button 	   | duration   | off        | in es      | in game    |
@@ -53,6 +55,17 @@ Button operation for NFC systems:
 | power        | 3 seconds  | tbd        | tbd        | tbd        |
 | reset        | momentary  | tbd        | tbd        | tbd        | 
 | reset        | 3 seconds  | tbd        | tbd        | tbd        |
+
+
+#### KIT 1B
+Button operation for KIT1B non NFC systems:
+
+|  button 	   | duration   | off        | in es      | in game    |
+| ------------ | ----------	| ---------- | ---------- | ---------- |
+| power        | latching   | turn on    | turn off   | turn off   |
+| power        |    ---     |    ---     |    ---     |    ---     |
+| reset        | momentary  | nothing    | nothing    | reset game | 
+| reset        | 3 seconds  | nothing    | reset      | reset      |
 
 
 ## Kit Installation
