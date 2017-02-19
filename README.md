@@ -113,13 +113,8 @@ This section only needs to be preformed if the mini smart controller firmware ne
 1. Disconnect power source from mini smart controller.
 2. Short circuit (short) the bootloader jumper (P6) and connect mini smart controller to a USB host. The red LED (D1) will flash repeatedly once recognized by the USB host.  Reference pictures be
 
-    <figure>
-        <img src="http://i.imgur.com/XFgoiSC.png" width="100"/> 
-        <img src="http://i.imgur.com/jMDuq5c.png" width="100"/>
-        <figcaption>
-            Examples of P6 shorted
-        </figcaption>
-    </figure>
+    <img src="http://i.imgur.com/XFgoiSC.png" width="100"/> 
+    <img src="http://i.imgur.com/jMDuq5c.png" width="100"/>
     
 3. Open the application called HIDBootloader([download from here](https://github.com/kjones200/minismartcontroller/tree/master/dist/HIDBootloader/bin)) to update the firmware.
 4. Click on File > Import Firmware Image and select the desire firmware image.
@@ -132,13 +127,8 @@ This section only needs to be preformed if the mini smart controller firmware ne
     
 6. Once the image has been successfully loaded, unplug mini smart controller from host and remove bootloader jumper (P6).
 
-     <figure>
-        <img src="http://i.imgur.com/UpB76Du.png" width="100"/>
-        <img src="http://i.imgur.com/mqQxmSG.png" width="100"/>
-        <figcaption>
-            Examples of P6 not shorted
-        </figcaption>
-    </figure>
+    <img src="http://i.imgur.com/UpB76Du.png" width="100"/>
+    <img src="http://i.imgur.com/mqQxmSG.png" width="100"/>
      
 6. Update complete.
 
