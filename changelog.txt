@@ -1,0 +1,35 @@
+CHANGE LOG
+
+2017-02-22
+    Script
+        v1.2
+            added compatibilty with for kit 1a and 1b.
+            added support for NFC
+
+    Firmware
+        v1.2.29.3  - kit1a
+            changes for compatibility with script version 1.2
+            added support for NFC
+        v1.2.29.3  - kit1b
+            changes for compatibility with script version 1.2
+            added support for NFC
+
+2017-02-08
+    Script
+        v1.0
+            no change
+
+    Firmware
+        v1.0.0.0  - kit1a
+            no change
+        v1.2.29.0 - kit1b
+            initial release
+
+2017-01-26
+    Script
+        v1.0
+            initial release
+
+    Firmware
+        v1.0 - kit1a
+            initial release
