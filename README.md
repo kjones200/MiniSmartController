@@ -49,7 +49,7 @@ Button operation for NFC systems:
 | power        | momentary  | turn on system. if valid cartridge, launch game   | if valid cartridge launch game; otherwise nothing        | eject game        |   
 | power        | 3 seconds  | nothing        | shutdown        | shutdown        |
 | reset        | momentary  | nothing        | nothing        | reset game        | 
-| reset        | 3 seconds  | nothing        | if cartridge detect, write last played game; otherwise nothing        | if cartridge detect, write last played game; otherwise nothing        |
+| reset        | 3 seconds  | nothing        | if cartridge detected, write last played game; otherwise nothing        | if cartridge detected, write last played game; otherwise nothing        |
 
 
 #### KIT 1B
