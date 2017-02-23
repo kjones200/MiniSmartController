@@ -178,18 +178,19 @@ This section only needs to be preformed if the mini smart controller firmware ne
     cd ~/
     git clone https://github.com/kjones200/minismartcontroller.git
     ```
-2. Modify *rc.local* to launch script at boot up
+2. Copy retropie script files *runcommand-onend.sh,runcommand-onestar.sh, and autostart.sh* to */opt/retropie/config/all* by enter following command:
+    ```
+    cp *.sh /opt/retropie/config/all
+    
+    or
+    
+    sudo cp *.sh /opt/retropie/config/all
 
     ```
-    sudo nano /etc/rc.local
-    ```
-3. Enter the following command just before 'exit 0':
-
-    ```
-    python /home/pi/minismartcontroller/pyMiniSmartController/py_msc.py &
-    ```
-    <img src="https://s25.postimg.org/5cd02kvpr/Screen_Shot_2017_02_04_at_5_58_06_PM.png" width="500">
+    NOTE: If Permission denied error is received, re-enter the command with *sudo* pre-appended. 
+    
 4. Hit 'Ctrl+X' then 'y' and finally 'Enter' to save and exit.
+
 5. Script installation is now complete, now [reboot](https://www.youtube.com/watch?v=fuEJWmxWkKw)
 
     ```
@@ -197,7 +198,8 @@ This section only needs to be preformed if the mini smart controller firmware ne
     ```
 
 ## Upgrading Kit 1A/1B to Kit 1A/1B NFC
-This section should only be completed by users upgrading their current mini smart controller kit with a NFC reader.  
+This section should only be completed by users upgrading their current mini smart controller kit with a NFC reader.  For
+new installations, please start [here](https://github.com/kjones200/minismartcontroller#retropie-installation-and-configuration)
 
 1. SSH into retropie.
 2. Download the latest version of the mini smart controller script
