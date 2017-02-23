@@ -195,6 +195,7 @@ This section only needs to be preformed if the mini smart controller firmware ne
     ```
     sudo reboot now
     ```
+
 ## Upgrading Kit 1A/1B to Kit 1A/1B NFC
 This section should only be completed by users upgrading their current mini smart controller kit with a NFC reader.  
 
