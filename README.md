@@ -28,11 +28,6 @@ Here is what what is exactly is included:
 
 Visit [Mini NES Builders](https://www.facebook.com/groups/miniNESbuilders/) for inspiration and help.
 
-## Change Log
-| Date       	| Notes           	|
-|------------	|-----------------	|
-| 2017-01-26 	| Initial release 	|
-|
 
 ## Front Panel Button Operations
 
@@ -51,10 +46,10 @@ Button operation for NFC systems:
 
 |  button 	   | duration   | off        | in es      | in game    |
 | ------------ | ----------	| ---------- | ---------- | ---------- |
-| power        | momentary  | tbd        | tbd        | tbd        |   
-| power        | 3 seconds  | tbd        | tbd        | tbd        |
-| reset        | momentary  | tbd        | tbd        | tbd        | 
-| reset        | 3 seconds  | tbd        | tbd        | tbd        |
+| power        | momentary  | turn on system. if valid cartridge, launch game   | if valid cartridge launch game; otherwise nothing        | eject game        |   
+| power        | 3 seconds  | nothing        | shutdown        | shutdown        |
+| reset        | momentary  | nothing        | nothing        | reset game        | 
+| reset        | 3 seconds  | nothing        | if cartridge detect, write last played game; otherwise nothing        | if cartridge detect, write last played game; otherwise nothing        |
 
 
 #### KIT 1B
@@ -197,6 +192,42 @@ This section only needs to be preformed if the mini smart controller firmware ne
 4. Hit 'Ctrl+X' then 'y' and finally 'Enter' to save and exit.
 5. Script installation is now complete, now [reboot](https://www.youtube.com/watch?v=fuEJWmxWkKw)
 
+    ```
+    sudo reboot now
+    ```
+## Upgrading Kit 1A/1B to Kit 1A/1B NFC
+This section should only be completed by users upgrading their current mini smart controller kit with a NFC reader.  
+
+1. SSH into retropie.
+2. Download the latest version of the mini smart controller script
+    ```
+    cd ~/minismartcontroller
+    git reset --hard HEAD
+    git pull
+    ```
+3. Modify the *rc.local* file
+
+    ```
+    sudo nano /etc/rc.local
+    ```
+4. Remove the command *python /home/pi/minismartcontroller/pyMiniSmartController/py_msc.py &* by either deleting the command or commenting out the command.  In the example below, the command is commented out by place the '#' and the beginning of the line. 
+    
+    <img src="http://i.imgur.com/O6Uas3J.png" width="500">
+
+5. Hit 'Ctrl+X' then 'y' and finally 'Enter' to save and exit.
+
+6. Copy retropie script files *runcommand-onend.sh,runcommand-onestar.sh, and autostart.sh* to */opt/retropie/config/all* by enter following command:
+    ```
+    cp *.sh /opt/retropie/config/all
+    
+    or
+    
+    sudo cp *.sh /opt/retropie/config/all
+
+    ```
+    NOTE: If Permission denied error is received, re-enter the command with *sudo* pre-appended. 
+
+7. Upgrade is now complete, now reboot.
     ```
     sudo reboot now
     ```
