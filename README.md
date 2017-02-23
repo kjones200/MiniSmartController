@@ -201,6 +201,7 @@ This section should only be completed by users upgrading their current mini smar
 
 1. SSH into retropie.
 2. Download the latest version of the mini smart controller script
+
     ```
     cd ~/minismartcontroller
     git reset --hard HEAD
