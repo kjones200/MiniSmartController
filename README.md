@@ -12,7 +12,6 @@ Mini Smart Controller is a simple electronics kits used in mini NES builds and m
 - Zero soldering required.
 
 #### Features to Come:
-- NFC/RFID support
 - Turn ON/OFF raspberry pi via bluetooth controller i.e Wii U Controller
 
 This electronics kit comes with all necessary electronics, assemblies, and harnesses, excluding the micro USB cable, Raspberry Pi, and fan.
