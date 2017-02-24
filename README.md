@@ -106,7 +106,7 @@ This section only needs to be preformed if the mini smart controller firmware ne
 **NOTE:** All mini smart controllers ship with the latest firmware pre-loaded.
 
 1. Disconnect power source from mini smart controller.
-2. Short circuit (short) the bootloader jumper (P6) and connect mini smart controller to a USB host. The red LED (D1) will flash repeatedly once recognized by the USB host.  Reference pictures be
+2. Short circuit (short) the bootloader jumper (P6) and connect mini smart controller to a USB host. The red LED (D1) will flash repeatedly once recognized by the USB host.  Reference pictures below:
 
     <img src="http://i.imgur.com/XFgoiSC.png" width="100"/> 
     <img src="http://i.imgur.com/jMDuq5c.png" width="100"/>
