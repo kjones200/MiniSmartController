@@ -16,7 +16,7 @@ Mini Smart Controller is a simple electronics kits used in mini NES builds and m
 
 This electronics kit comes with all necessary electronics, assemblies, and harnesses, excluding the micro USB cable, Raspberry Pi, and fan.
 
-Here is what what is exactly is included:
+Here is what is included:
 
 - Main PCBA
 - Front panel PCBA including a 3mm red LED, power switch, and reset switch.
@@ -100,7 +100,7 @@ Button operation for KIT1B non NFC systems:
 
 ## Firmware Update
 
-This section only needs to be preformed if the mini smart controller firmware needs to be updated or changed.  
+This section only needs to be performed if the mini smart controller firmware needs to be updated or changed.  
 
 **NOTE:** All mini smart controllers ship with the latest firmware pre-loaded.
 
@@ -111,7 +111,7 @@ This section only needs to be preformed if the mini smart controller firmware ne
     <img src="http://i.imgur.com/jMDuq5c.png" width="100"/>
     
 3. Open the application called HIDBootloader([download from here](https://github.com/kjones200/minismartcontroller/tree/master/dist/HIDBootloader/bin)) to update the firmware.
-4. Click on File > Import Firmware Image and select the desire firmware image.
+4. Click on File > Import Firmware Image and select the desired firmware image.
 
     <img src="http://i.imgur.com/w9QFH9G.png" width="500"/>
  
@@ -177,7 +177,12 @@ This section only needs to be preformed if the mini smart controller firmware ne
     cd ~/
     git clone https://github.com/kjones200/minismartcontroller.git
     ```
-2. Copy retropie script files *runcommand-onend.sh,runcommand-onestar.sh, and autostart.sh* to */opt/retropie/config/all* by enter following command:
+2. Switch to the minismartcontroller directory
+    ```
+    cd minismartcontroller
+    ```
+    
+3. Copy retropie script files *runcommand-onend.sh,runcommand-onestar.sh, and autostart.sh* to */opt/retropie/config/all* by entering the following command:
     ```
     cp *.sh /opt/retropie/config/all
     
@@ -188,9 +193,9 @@ This section only needs to be preformed if the mini smart controller firmware ne
     ```
     NOTE: If Permission denied error is received, re-enter the command with *sudo* pre-appended. 
     
-4. Hit 'Ctrl+X' then 'y' and finally 'Enter' to save and exit.
+5. Hit 'Ctrl+X' then 'y' and finally 'Enter' to save and exit.
 
-5. Script installation is now complete, now [reboot](https://www.youtube.com/watch?v=fuEJWmxWkKw)
+6. Script installation is now complete, now [reboot](https://www.youtube.com/watch?v=fuEJWmxWkKw)
 
     ```
     sudo reboot now
@@ -213,13 +218,18 @@ new installations, please start [here](https://github.com/kjones200/minismartcon
     ```
     sudo nano /etc/rc.local
     ```
-4. Remove the command *python /home/pi/minismartcontroller/pyMiniSmartController/py_msc.py &* by either deleting the command or commenting out the command.  In the example below, the command is commented out by place the '#' and the beginning of the line. 
+4. Remove the command *python /home/pi/minismartcontroller/pyMiniSmartController/py_msc.py &* by either deleting the command or commenting out the command.  In the example below, the command is commented out by placeing the '#' at the beginning of the line. 
     
     <img src="http://i.imgur.com/O6Uas3J.png" width="500">
 
 5. Hit 'Ctrl+X' then 'y' and finally 'Enter' to save and exit.
 
-6. Copy retropie script files *runcommand-onend.sh,runcommand-onestar.sh, and autostart.sh* to */opt/retropie/config/all* by enter following command:
+6. Switch to the minismartcontroller directory
+    ```
+    cd minismartcontroller
+    ```
+
+7. Copy retropie script files *runcommand-onend.sh,runcommand-onestar.sh, and autostart.sh* to */opt/retropie/config/all* by entering the following command:
     ```
     cp *.sh /opt/retropie/config/all
     
@@ -230,7 +240,7 @@ new installations, please start [here](https://github.com/kjones200/minismartcon
     ```
     NOTE: If Permission denied error is received, re-enter the command with *sudo* pre-appended. 
 
-7. Upgrade is now complete, now reboot.
+8. Upgrade is now complete, now reboot.
     ```
     sudo reboot now
     ```
@@ -240,11 +250,11 @@ new installations, please start [here](https://github.com/kjones200/minismartcon
 The mini smart controller kit 1A can be converted to kit 1B.  Kit 1B uses a latching switch for the power button.
 
 - Requirements:
-    - Basic electronic knowlege of switches
+    - Basic electronic knowledge of switches
     - Soldering experience
 - Tool
     - Soldering iron
-    - Vacuum de-soldering iron (Recommended [Vaccum Desolding Iron](https://www.amazon.com/Science-Purchase-Desoldering-Iron/dp/B00CUKTH2A/ref=sr_1_9?ie=UTF8&qid=1485560615&sr=8-9&keywords=vacuum+desoldering+iron))
+    - Vacuum de-soldering iron (Recommended [Vacuum Desolding Iron](https://www.amazon.com/Science-Purchase-Desoldering-Iron/dp/B00CUKTH2A/ref=sr_1_9?ie=UTF8&qid=1485560615&sr=8-9&keywords=vacuum+desoldering+iron))
     - Solder
     - Flux
     - Fume extractor (Optional)
