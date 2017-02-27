@@ -191,18 +191,16 @@ This section only needs to be performed if the mini smart controller firmware ne
     
 3. Copy retropie script files *runcommand-onend.sh,runcommand-onestar.sh, and autostart.sh* to */opt/retropie/config/all* by entering the following command:
     ```
-    cp *.sh /opt/retropie/config/all
+    cp *.sh /opt/retropie/configs/all
     
     or
     
-    sudo cp *.sh /opt/retropie/config/all
+    sudo cp *.sh /opt/retropie/configs/all
 
     ```
     NOTE: If Permission denied error is received, re-enter the command with *sudo* pre-appended. 
     
-5. Hit 'Ctrl+X' then 'y' and finally 'Enter' to save and exit.
-
-6. Script installation is now complete, now [reboot](https://www.youtube.com/watch?v=fuEJWmxWkKw)
+4. Script installation is now complete, now [reboot](https://www.youtube.com/watch?v=fuEJWmxWkKw)
 
     ```
     sudo reboot now
@@ -238,11 +236,11 @@ new installations, please start [here](https://github.com/kjones200/minismartcon
 
 7. Copy retropie script files *runcommand-onend.sh,runcommand-onestar.sh, and autostart.sh* to */opt/retropie/config/all* by entering the following command:
     ```
-    cp *.sh /opt/retropie/config/all
+    cp *.sh /opt/retropie/configs/all
     
     or
     
-    sudo cp *.sh /opt/retropie/config/all
+    sudo cp *.sh /opt/retropie/configs/all
 
     ```
     NOTE: If Permission denied error is received, re-enter the command with *sudo* pre-appended. 
