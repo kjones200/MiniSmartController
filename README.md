@@ -200,31 +200,32 @@ This section only needs to be performed if the mini smart controller firmware ne
 This section should only be completed by users upgrading their current mini smart controller kit with a NFC reader.  For
 new installations, please start [here](https://github.com/kjones200/minismartcontroller#retropie-installation-and-configuration)
 
-1. SSH into retropie.
-2. Download the latest version of the mini smart controller script
+1. Update the mini smart controller with firmware version 1.2.29.3 or higher.  [Firmware update](https://github.com/kjones200/minismartcontroller/blob/master/README.md#firmware-update)
+2. SSH into retropie.
+3. Download the latest version of the mini smart controller script
 
     ```
     cd ~/minismartcontroller
     git reset --hard HEAD
     git pull
     ```
-3. Modify the *rc.local* file
+4. If rc.local was previously used, modify the *rc.local* file
 
     ```
     sudo nano /etc/rc.local
     ```
-4. Remove the command *python /home/pi/minismartcontroller/pyMiniSmartController/py_msc.py &* by either deleting the command or commenting out the command.  In the example below, the command is commented out by placeing the '#' at the beginning of the line. 
+5. Remove the command *python /home/pi/minismartcontroller/pyMiniSmartController/py_msc.py &* by either deleting the command or commenting out the command.  In the example below, the command is commented out by placeing the '#' at the beginning of the line. 
     
     <img src="http://i.imgur.com/O6Uas3J.png" width="500">
 
-5. Hit 'Ctrl+X' then 'y' and finally 'Enter' to save and exit.
+6. Hit 'Ctrl+X' then 'y' and finally 'Enter' to save and exit.
 
-6. Switch to the minismartcontroller directory
+7. Switch to the minismartcontroller directory
     ```
     cd minismartcontroller
     ```
 
-7. Copy retropie script files *runcommand-onend.sh,runcommand-onestar.sh, and autostart.sh* to */opt/retropie/config/all* by entering the following command:
+8. Copy retropie script files *runcommand-onend.sh,runcommand-onestar.sh, and autostart.sh* to */opt/retropie/config/all* by entering the following command:
     ```
     cp *.sh /opt/retropie/configs/all
     
@@ -235,7 +236,7 @@ new installations, please start [here](https://github.com/kjones200/minismartcon
     ```
     NOTE: If Permission denied error is received, re-enter the command with *sudo* pre-appended. 
 
-8. Upgrade is now complete, now reboot.
+9. Upgrade is now complete, now reboot.
     ```
     sudo reboot now
     ```
