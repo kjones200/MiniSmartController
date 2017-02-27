@@ -27,16 +27,6 @@ Here is what is included:
 
 Visit [Mini NES Builders](https://www.facebook.com/groups/miniNESbuilders/) for inspiration and help.
 
-## Front Panel LED Operation
-| PATTEN              	| STATUS                                                                             	|
-|---------------------	|------------------------------------------------------------------------------------	|
-| Flash every 3 seconds 	| Mini smart controller is idle.                                                     	|
-| Flashing (rapid)    	| Raspberry Pi has been powered on (or reset); waiting for boot sequence to complete 	|
-| Flash every second   	| Raspberry Pi is shutting down                                                      	|
-| Permanent on        	| Raspberry Pi boot sequence has completed and script is running 
-
-## Front Panel Button Operations
-
 #### KIT 1A
 Button operation for non NFC systems:
 
