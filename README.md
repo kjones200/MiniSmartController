@@ -174,12 +174,28 @@ This section only needs to be performed if the mini smart controller firmware ne
     cd ~/
     git clone https://github.com/kjones200/minismartcontroller.git
     ```
-2. Switch to the minismartcontroller directory
+2. For NFC kits, skip to step 7.
+
+3. Modify rc.local to launch script at boot up
+
+    ```
+    sudo nano /etc/rc.local
+    ```
+4. Enter the following command just before 'exit 0':
+
+    ```
+    python /home/pi/minismartcontroller/pyMiniSmartController/py_msc.py &
+    ```
+5. Hit 'Ctrl+X' then 'y' and finally 'Enter' to save and exit.
+
+6. Skip to step 9.
+
+7. Switch to the minismartcontroller directory
     ```
     cd minismartcontroller
     ```
     
-3. Copy retropie script files *runcommand-onend.sh,runcommand-onestar.sh, and autostart.sh* to */opt/retropie/config/all* by entering the following command:
+8. Copy retropie script files *runcommand-onend.sh,runcommand-onestar.sh, and autostart.sh* to */opt/retropie/config/all* by entering the following command:
     ```
     cp *.sh /opt/retropie/configs/all
     
@@ -190,7 +206,7 @@ This section only needs to be performed if the mini smart controller firmware ne
     ```
     NOTE: If Permission denied error is received, re-enter the command with *sudo* pre-appended. 
     
-4. Script installation is now complete, now [reboot](https://www.youtube.com/watch?v=fuEJWmxWkKw)
+9. Script installation is now complete
 
     ```
     sudo reboot now
